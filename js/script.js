@@ -252,7 +252,8 @@ function AparecerMenuCajero() {
         document.querySelector(".menu-cajero").setAttribute("style", "display: none;")
         AparecerDatosIngreso();
     };
-    limpiarTextos();
+    const usuarioActual = obtenerUsuarioActual();
+    document.querySelector(".txtInfo").textContent = `Bienvenido ${usuarioActual.nombre} ${usuarioActual.apellido}. ¿Qué operación deseas realizar?`;
 }
 
 function obtenerUsuarioActual() {
