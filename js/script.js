@@ -59,7 +59,7 @@ document.querySelector(".btn-login").addEventListener("click", function () {
             let contraseñaIngresada = passwordInput.value
             if (contraseñaIngresada === usuarioActual.contraseña) { // si la contraseña es correcta, inicio sesión
                 localStorage.setItem("usuarioActual", JSON.stringify(usuarioActual)); // guardo el usuario actual en el localStorage
-                txtInfo.textContent = "Inicio de sesión exitoso.";
+                txtInfo.textContent = `Inicio de sesión exitoso. Bienvenido ${usuarioActual.nombre} ${usuarioActual.apellido}.`;
                 AparecerMenuCajero();
             } else if (intentos < 3) { // si la contraseña es incorrecta, incremento el contador de intentos y muestro un mensaje de error
                 txtInfo.textContent = "Contraseña incorrecta. Por favor, intenta nuevamente. Intento " + (intentos + 1) + " de 3.";
@@ -173,6 +173,11 @@ document.querySelector(".btn-transferir").addEventListener("click", function () 
 document.querySelector(".btn-confirmar-transferencia").addEventListener("click", function () {
     const usuarioActual = obtenerUsuarioActual();
     const dniDestino = document.querySelector("#dni-destino").value;
+    if(dniDestino === usuarioActual.dni){ // si el usuario destino es el mismo que el usuario actual, muestro un mensaje de error
+        const txtInfo = document.querySelector(".txtInfo");
+        txtInfo.textContent = "No puedes transferir dinero a tu propia cuenta. Por favor, ingresa un DNI diferente.";
+        return;
+    }
     const montoTransferir = Number(document.querySelector("#monto-transferir").value);
     const txtInfo = document.querySelector(".txtInfo");
     const usuarioDestino = usuarios.find(usuario => usuario.dni === dniDestino);
