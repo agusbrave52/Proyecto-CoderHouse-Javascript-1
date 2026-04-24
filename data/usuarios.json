@@ -1,0 +1,7 @@
+[
+    { "dni": "12345678", "nombre": "Juan", "apellido": "Perez", "contraseña": "1234", "dinero": 1000, "blocked": false },
+    { "dni": "87654321", "nombre": "Maria", "apellido": "Gomez", "contraseña": "1234", "dinero": 500, "blocked": false },
+    { "dni": "11223344", "nombre": "Carlos", "apellido": "Lopez", "contraseña": "1234", "dinero": 2000, "blocked": false },
+    { "dni": "44332211", "nombre": "Ana", "apellido": "Martinez", "contraseña": "1234", "dinero": 1500, "blocked": false },
+    { "dni": "55667788", "nombre": "Luis", "apellido": "Garcia", "contraseña": "1234", "dinero": 3000, "blocked": false }
+]

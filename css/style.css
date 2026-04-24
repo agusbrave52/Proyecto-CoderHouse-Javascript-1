@@ -56,7 +56,7 @@
     overflow: hidden;
     top: 25%;
 }
-.btn-entrar, .btn-consultar, .btn-retirar, .btn-ingresar, .btn-transferir, .btn-volver, .btn-login, .btn-confirmar-retiro, .btn-confirmar-ingreso, .btn-confirmar-transferencia{
+.btn-entrar, .btn-consultar, .btn-retirar, .btn-ingresar, .btn-transferir, .btn-volver, .btn-login, .btn-confirmar-retiro, .btn-confirmar-ingreso, .btn-confirmar-transferencia, .btn-historial{
     padding: 10px 20px;
     font-size: x-large;
     font-weight: 600;
@@ -65,7 +65,7 @@
     color: rgb(0, 0, 80);
     background-color: transparent;
 }
-.btn-entrar:hover, .btn-consultar:hover, .btn-retirar:hover, .btn-ingresar:hover, .btn-transferir:hover, .btn-volver:hover, .btn-login:hover, .btn-confirmar-retiro:hover, .btn-confirmar-ingreso:hover, .btn-confirmar-transferencia:hover{
+.btn-entrar:hover, .btn-consultar:hover, .btn-retirar:hover, .btn-ingresar:hover, .btn-transferir:hover, .btn-volver:hover, .btn-login:hover, .btn-confirmar-retiro:hover, .btn-confirmar-ingreso:hover, .btn-confirmar-transferencia:hover, .btn-historial:hover{
     background-color: rgb(0, 0, 80);
     color: rgb(28, 202, 255);
     transition: 0.2s;
@@ -129,40 +129,45 @@
 /* ******************************************************************************************* */
 /* menu cajero */
 
-.menu-cajero{
+.menu-cajero, .menu-transferir{
     display: none;
     flex-direction: column;
     gap: 20px;
     align-items: center;
     justify-content: center;
 }
-.row1 button, .row2 button{
+.row1 button, .row2 button, .row3 button{
     width: 250px;
-}
-
-.menu-transferir{
-    display: none;
-    gap: 20px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 /* ******************************************************************************************* */
 /* menu funcionalidades */
 
-.menu-retirar{
+.menu-retirar, .menu-ingresar{
     display: none;
     gap: 20px;
     align-items: center;
     justify-content: center;
 }
-
-.menu-ingresar{
+.menu-historial{
     display: none;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
+    overflow-y: scroll;
+    max-height: 40vh;
+}
+.historial thead tr{
+    background-color: rgb(0, 0, 80);
+    color: rgb(28, 202, 255);
+    position: sticky;
+    top: 0;
+}
+.historial thead tr th{
+    padding: 5px;
+    font-size: x-large;
+}
+.historial tbody tr td{
+    padding: 5px;
+    font-size: large;
+    text-align: center;
 }
 
 

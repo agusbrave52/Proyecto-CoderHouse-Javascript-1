@@ -1,0 +1,24 @@
+[
+    {
+        "fecha": "2024-04-01 10:00:00",
+        "tipo": "Ingreso",
+        "monto": 1000,
+        "usuario": "12345678",
+        "usuarioDestino": "12345678"
+
+    },
+    {
+        "fecha": "2024-04-02 14:30:00",
+        "tipo": "Retiro",
+        "monto": 200,
+        "usuario": "87654321",
+        "usuarioDestino": "87654321"
+    },
+    {
+        "fecha": "2024-04-03 09:15:00",
+        "tipo": "Transferencia",
+        "monto": 300,
+        "usuario": "12345678",
+        "usuarioDestino": "87654321"
+    }
+]

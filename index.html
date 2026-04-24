@@ -9,15 +9,6 @@
 </head>
 
 <body>
-    <!-- <p style="font-family: Arial, Helvetica, sans-serif; font-size: larger;">Simulador de cajero automatico con transferencias, ingresos y retiros de dinero. Para iniciar el cajero recarga la pagina</p>
-    <button type="button" onclick="window.location.reload()" style="font-family: Arial, Helvetica, sans-serif; font-size: medium; padding: 8px 12px; margin-bottom: 16px; cursor: pointer;">Reiniciar cajero</button>
-    <p style="font-family: Arial, Helvetica, sans-serif; font-size: larger;">
-    datos de los usuarios: <br>
-    dni = "12345678", "Juan", "Perez", contraseña = "1234"<br>
-    dni = "87654321", "Maria", "Gomez", contraseña = "1234"<br>
-    dni = "11223344", "Carlos", "Lopez", contraseña = "1234"<br>
-    dni = "44332211", "Ana", "Martinez", contraseña = "1234"<br>
-    dni = "55667788", "Luis", "Garcia", contraseña = "1234" -->
     <div class="pcv">
         <div class="datos">
             <p>Datos de los usuarios:</p>
@@ -54,6 +45,9 @@
                             <button class="btn-ingresar">Ingresar Dinero</button>
                             <button class="btn-transferir">Transferir Dinero</button>
                         </div>
+                        <div class="row3">
+                            <button class="btn-historial">Ver Historial de Transacciones</button>
+                        </div>
                     </div>
 
                     <div class="menu-retirar">
@@ -79,14 +73,31 @@
                         </div>
                         <button class="btn-confirmar-transferencia">Confirmar Transferencia</button>
                     </div>
+
+                    <div class="menu-historial">
+                        <table class="historial">
+                            <thead>
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th>Tipo de Transacción</th>
+                                    <th>Monto</th>
+                                    <th>Usuario Destino</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Aquí se agregarán las transacciones del historial -->
+                            </tbody>
+                        </table>
+                    </div>
                     <p class="txtInfo"></p>
                     <button class="btn-volver">Volver</button>
                 </div>
             </div>
         </div>
-        </p>
+    </div>
 
-        <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

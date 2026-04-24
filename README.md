@@ -8,7 +8,7 @@ Proyecto desarrollado para el curso de **JavaScript** en [CoderHouse](https://ww
  
 ## 📋 Descripción
  
-Simulador de cajero automático que permite a múltiples usuarios autenticarse con su DNI y contraseña para realizar operaciones bancarias básicas como consultar saldo, retirar dinero, ingresar dinero y realizar transferencias entre usuarios.
+Simulador de cajero automático que permite a múltiples usuarios autenticarse con su DNI y contraseña para realizar operaciones bancarias básicas como consultar saldo, retirar dinero, ingresar dinero y realizar transferencias entre usuarios. Los datos de usuarios y transacciones se persisten en `localStorage` y se inicializan desde archivos JSON.
  
 ---
  
@@ -19,6 +19,8 @@ Simulador de cajero automático que permite a múltiples usuarios autenticarse c
 - 💸 **Retiro de dinero**
 - 💵 **Ingreso de dinero**
 - 🔄 **Transferencias** entre usuarios registrados
+- 📋 **Historial de transacciones** con fecha, tipo, monto y usuario destino
+- 🔔 **Alertas visuales** con SweetAlert2
 - 🔙 Navegación entre pantallas con botón "Volver"
  
 ---
@@ -40,6 +42,9 @@ Simulador de cajero automático que permite a múltiples usuarios autenticarse c
 - **HTML5**
 - **CSS3**
 - **JavaScript** (Vanilla JS)
+- **SweetAlert2** — alertas y notificaciones visuales
+- **localStorage** — persistencia de datos en el navegador
+- **Fetch API** — carga inicial de datos desde archivos JSON
  
 ---
  
@@ -51,8 +56,11 @@ Proyecto-CoderHouse-Javascript-1/
 ├── index.html
 ├── css/
 │   └── style.css
-└── js/
-    └── script.js
+├── js/
+│   └── script.js
+└── data/
+    ├── usuarios.json
+    └── transacciones.json
 ```
  
 ---
@@ -63,7 +71,7 @@ Proyecto-CoderHouse-Javascript-1/
    ```bash
    git clone https://github.com/agusbrave52/Proyecto-CoderHouse-Javascript-1.git
    ```
-2. Abrí el archivo `index.html` en tu navegador.
+2. Abrí el archivo `index.html` en tu navegador (se recomienda usar un servidor local como Live Server para que el `fetch` funcione correctamente).
 3. Hacé clic en **"Entrar al Cajero"**.
 4. Ingresá un DNI y contraseña de la tabla de usuarios de prueba.
 5. ¡Listo! Ya podés usar el cajero.
